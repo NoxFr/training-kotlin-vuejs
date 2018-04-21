@@ -22,7 +22,7 @@ $ ./gradlew bootRun
 - REST Api on `beers`
 
 ### Thoughts
-Plugins adapters are lame... Developping in Kotlin JVM shows quickly how Kotlin is a complete different language compare to Java
+Plugins adapters are lame... Developping in Kotlin JVM shows quickly how Kotlin is a complete different language compared to Java
 and how much adaptations you have to do in order to use the common Java framework
 (jpa, mockito, junit, spring, etc.)
 
