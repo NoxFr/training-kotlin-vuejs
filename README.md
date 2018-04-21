@@ -1,5 +1,7 @@
 # Spring Boot Kotlin - VueJS Test Project
 
+[![Build Status](https://travis-ci.org/NoxFr/training-kotlin-vuejs.svg?branch=develop)](https://travis-ci.org/NoxFr/training-kotlin-vuejs)
+
 FullStack Kotlin (JVM) / Spring / H2 / VueJS testing app.
 Feel free to fork :)
 
