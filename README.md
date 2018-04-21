@@ -12,7 +12,7 @@ $  cd kotlin-back
 $ ./gradlew bootRun
 ```
 
-### State
+### State of the work
 
 **Back**
 
@@ -20,12 +20,19 @@ $ ./gradlew bootRun
 - REST Api on `beers`
 
 ### Thoughts
-Plugins adapters are lame... maybe i'll give a chance to https://github.com/JetBrains/Exposed
-instead of the good old Hibernate
+Plugins adapters are lame... Developping in Kotlin JVM shows quickly how Kotlin in not Java
+and how much adaptations you have to do in order to use the common Java framework
+(jpa, mockito, junit, spring, etc.)
+
+Maybe i'll give a chance to https://github.com/JetBrains/Exposed
+instead of the good old JPA
+
+Testing is also not conveniant with raw Mockito, you better use https://github.com/nhaarman/mockito-kotlin in addition
+(_when_ is a restricted word in Kotlin, constructors/properties paradigm etc.)
 
 
 ### TODO
 - Back
-   - CRUD sur base H2
+  - POST/PUT/DELETE
 - Front
 
