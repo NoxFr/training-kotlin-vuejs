@@ -26,6 +26,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
+
 compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
@@ -35,6 +36,12 @@ compileTestKotlin {
 compileKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
     }
 }
 
