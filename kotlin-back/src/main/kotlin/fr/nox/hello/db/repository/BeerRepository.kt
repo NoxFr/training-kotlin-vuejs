@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository
 import java.util.*
 
 interface BeerRepository : CrudRepository<Beer, UUID> {
-    fun findByName(name: String) : Iterable<Beer>
+    fun findByName(name: String) : Beer?
 }

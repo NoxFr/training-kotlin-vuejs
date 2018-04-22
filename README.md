@@ -36,7 +36,5 @@ Testing is also not conveniant with raw Mockito, you better use https://github.c
 
 
 ### TODO
-- Back
-  - POST/PUT/DELETE
 - Front
 
