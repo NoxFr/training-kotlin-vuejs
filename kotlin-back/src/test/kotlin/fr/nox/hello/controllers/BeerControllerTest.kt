@@ -8,6 +8,7 @@ import fr.nox.hello.db.repository.BeerRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.mockito.ArgumentMatchers.anyString
+import java.util.*
 
 class BeerControllerTest {
 
@@ -35,5 +36,19 @@ class BeerControllerTest {
 
         assertThat(result).isEqualTo(beers)
         verify(beerRepository).findAll()
+    }
+
+    @Test
+    fun findByUUID(){
+        val uuid = UUID.randomUUID()
+
+        val beerRepository: BeerRepository = mock()
+        val beer= Beer("guiness", "ireland")
+        whenever(beerRepository.findById(uuid)).thenReturn(Optional.of(beer))
+
+        val result = BeerController(beerRepository).findByUUID(uuid.toString())
+
+        assertThat(result).isEqualTo(Optional.of(beer))
+        verify(beerRepository).findById(uuid)
     }
 }
