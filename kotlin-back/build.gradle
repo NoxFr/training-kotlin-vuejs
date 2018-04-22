@@ -42,6 +42,7 @@ compileKotlin {
 jacocoTestReport {
     reports {
         xml.enabled true
+        xml.destination "${buildDir}/reports/jacoco/report.xml"
     }
 }
 

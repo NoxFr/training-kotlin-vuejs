@@ -2,9 +2,13 @@ matrix:
   include:
     language: java
     jdk: oraclejdk8
-    before_install:
+    before_script:
       - cd kotlin-back
+      - chmod +x gradlew
+    script:
+      - ./gradlew check
+      - ./gradlew jacocoTestReport
     after_success:
-      - bash <(curl -s https://codecov.io/bash) -s kotlin-back -cF kotlin
+      - bash <(curl -s https://codecov.io/bash) -s kotlin-back/reports/jacoco -cF kotlin
 notifications:
   email: false
