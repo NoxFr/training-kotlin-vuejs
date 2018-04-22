@@ -37,6 +37,10 @@ compileKotlin {
     }
 }
 
+test{
+    useJUnitPlatform()
+}
+
 repositories {
     jcenter()
 }
