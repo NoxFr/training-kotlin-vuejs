@@ -9,6 +9,6 @@ matrix:
       - ./gradlew check
       - ./gradlew jacocoTestReport
     after_success:
-      - bash <(curl -s https://codecov.io/bash) -s kotlin-back/reports/jacoco -cF kotlin
+      - bash <(curl -s https://codecov.io/bash) -s kotlin-back/build/reports/jacoco -cF kotlin
 notifications:
   email: false
