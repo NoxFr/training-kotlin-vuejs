@@ -1,6 +1,8 @@
 # Spring Boot Kotlin - VueJS Test Project
 
-[![Build Status](https://travis-ci.org/NoxFr/training-kotlin-vuejs.svg?branch=develop)](https://travis-ci.org/NoxFr/training-kotlin-vuejs)
+[![Build Status](https://travis-ci.org/NoxFr/training-kotlin-vuejs.svg?branch=develop)](https://travis-ci.org/NoxFr/training-kotlin-vuejs)  [![Coverage Status](https://img.shields.io/codecov/c/github/NoxFr/training-kotlin-vuejs.svg)](https://codecov.io/github/NoxFr/training-kotlin-vuejs)
+
+**Note for coverage**  Currently, Jacoco and Kotlin are not BFF so data class are not covered because of equals/hashcode/clone/etc. byte cote generation.
 
 FullStack Kotlin (JVM) / Spring / H2 / VueJS testing app.
 Feel free to fork :)
