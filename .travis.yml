@@ -5,6 +5,6 @@ matrix:
     before_install:
       - cd kotlin-back
     after_success:
-      - bash <(curl -s https://codecov.io/bash)
+      - bash <(curl -s https://codecov.io/bash) -s kotlin-back -cF kotlin
 notifications:
   email: false
