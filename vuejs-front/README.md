@@ -1,6 +1,6 @@
 # vuejs-front
 
-> A Vue.js project
+> A Vue.js project (but with Beers)
 
 ## Build Setup
 
