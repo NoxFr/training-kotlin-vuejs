@@ -9,7 +9,14 @@ Feel free to fork :)
 
 ### How-to
 
-Run the app with
+**Front**
+
+```
+$  cd vuejs-front
+$  npm run dev
+```
+
+**Back**
 
 ```
 $  cd kotlin-back
@@ -17,6 +24,11 @@ $ ./gradlew bootRun
 ```
 
 ### State of the work
+
+**Front**
+
+- VueJS app (created from vue-cli webpack template)
+- Jest unit testing
 
 **Back**
 
@@ -34,7 +46,9 @@ instead of the good old JPA
 Testing is also not conveniant with raw Mockito, you better use https://github.com/nhaarman/mockito-kotlin in addition
 (_when_ is a restricted word in Kotlin, constructors/properties paradigm etc.)
 
-
 ### TODO
-- Front
-
+* Docker
+  * compose
+* Front :
+  - add beer
+* Moar beer ?
