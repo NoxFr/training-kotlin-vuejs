@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App.vue should match snapshot 1`] = `
+<div
+  id="app"
+>
+  <!---->
+   
+  <!---->
+   
+  <!---->
+</div>
+`;
