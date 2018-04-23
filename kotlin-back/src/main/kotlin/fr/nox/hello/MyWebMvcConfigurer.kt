@@ -7,6 +7,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer
 @Configuration
 class MyWebMvcConfigurer : WebMvcConfigurer {
     override fun addCorsMappings(registry: CorsRegistry?) {
-        registry!!.addMapping("/beers").allowedOrigins("http://localhost:8080")
+        registry!!.addMapping("/**").allowedMethods("GET", "POST", "DELETE")
     }
 }
