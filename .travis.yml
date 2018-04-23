@@ -21,9 +21,10 @@ matrix:
      - bash <(curl -s https://codecov.io/bash) -s kotlin-back/build/reports/jacoco -cF kotlin
   include:
     language: node_js
-    before_script:
-       - cd vuejs-front
-       - export PATH=./node_modules/.bin:$PATH
+    before_install :
+      - cd vuejs-front
+# Remove the './node_modules/.bin:' entry, see https://github.com/travis-ci/travis-ci/issues/8813      -  +- export PATH=`echo ${PATH} | sed -re 's,(^|:)(./)?node_modules/.bin($|:),\1,'`
+      - export PATH=`echo ${PATH} | sed -re 's,(^|:)(./)?node_modules/.bin($|:),\1,'`
     script:
      - npm test
     cache:
