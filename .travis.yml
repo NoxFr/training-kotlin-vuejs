@@ -12,5 +12,13 @@ matrix:
      - cd ..
      - pwd
      - bash <(curl -s https://codecov.io/bash) -s kotlin-back/build/reports/jacoco -cF kotlin
+  include:
+    language: node_js
+    before_script:
+       - cd kotlin-front
+    after_success:
+      - cd ..
+      - pwd
+      - bash <(curl -s https://codecov.io/bash) -s kotlin-front/test/unit/coverage -cF vuejs
 notifications:
   email: false
