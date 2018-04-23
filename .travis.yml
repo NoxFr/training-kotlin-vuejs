@@ -23,6 +23,7 @@ matrix:
     language: node_js
     before_script:
        - cd vuejs-front
+       - export PATH=./node_modules/.bin:$PATH
     script:
      - npm test
     cache:
