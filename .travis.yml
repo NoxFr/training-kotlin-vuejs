@@ -24,7 +24,6 @@ matrix:
     before_script:
        - cd vuejs-front
     script:
-     - npm i
      - npm test
     cache:
       directories:
