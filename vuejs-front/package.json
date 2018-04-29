@@ -13,10 +13,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-brands": "^5.0.10",
     "axios": "^0.18.0",
-    "bootstrap-vue": "^2.0.0-rc.8",
+    "material-design-icons-iconfont": "^3.0.3",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuetify": "^1.0.17"
   },
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.14",
@@ -50,6 +53,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
+    "jest-cli": "^22.4.3",
     "jest-serializer-vue": "^0.3.0",
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",

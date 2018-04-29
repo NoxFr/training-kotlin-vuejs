@@ -33,7 +33,7 @@ describe('BeerList.vue', () => {
     // then
     wrapper.vm.$nextTick(() => {
       expect(BeerService.get).toHaveBeenCalled()
-      expect(wrapper.vm.msgInfo).toContain("No more beers :(")
+      expect(wrapper.vm).toContain("No more beers :(")
     })
     
   })
