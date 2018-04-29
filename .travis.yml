@@ -23,10 +23,6 @@ matrix:
     language: node_js
     before_install :
       - cd vuejs-front
-# Remove the './node_modules/.bin:' entry, see https://github.com/travis-ci/travis-ci/issues/8813      -  +- export PATH=`echo ${PATH} | sed -re 's,(^|:)(./)?node_modules/.bin($|:),\1,'`
-      - export PATH=`echo ${PATH} | sed -re 's,(^|:)(./)?node_modules/.bin($|:),\1,'`
-    script:
-     - npm test
     cache:
       directories:
         - ".eslintcache"
