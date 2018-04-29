@@ -1,3 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Footer.vue should match snapshot 1`] = `<!---->`;
+exports[`Footer.vue should match snapshot 1`] = `
+<footer
+  class="footer"
+  style="height: auto;"
+>
+  <div
+    class="layout grey darken-3 row wrap justify-center"
+  >
+    <a
+      class="btn btn--icon"
+      href="https://github.com/NoxFr/training-kotlin-vuejs"
+    >
+      <div
+        class="btn__content"
+      >
+        <i
+          aria-hidden="true"
+          class="icon fab fa-github"
+          style="font-size: 24px;"
+        />
+      </div>
+    </a>
+    <a
+      class="btn btn--icon"
+      href="http://twitter.com/NoxFr"
+    >
+      <div
+        class="btn__content"
+      >
+        <i
+          aria-hidden="true"
+          class="icon fab fa-twitter"
+          style="font-size: 24px;"
+        />
+      </div>
+    </a>
+    <a
+      class="btn btn--icon"
+      href="https://www.linkedin.com/in/mathieu-durand-260104137/"
+    >
+      <div
+        class="btn__content"
+      >
+        <i
+          aria-hidden="true"
+          class="icon fab fa-linkedin"
+          style="font-size: 24px;"
+        />
+      </div>
+    </a>
+     
+    <div
+      class="flex xs12 py-3 text-xs-center white--text"
+    >
+      
+          ©2018 — 
+      <strong>
+        Beers
+      </strong>
+    </div>
+  </div>
+</footer>
+`;

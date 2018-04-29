@@ -1,3 +1,271 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Main.vue should match snapshot 1`] = `<!---->`;
+exports[`Main.vue should match snapshot 1`] = `
+<div
+  class="container grid-list-xl"
+>
+  <div
+    id="container"
+  />
+   
+  <div
+    id="container"
+  >
+    <div
+      class="elevation-5"
+    >
+      <div
+        class="table__overflow"
+      >
+        <table
+          class="datatable table"
+        >
+          <thead>
+            <tr>
+              <th
+                aria-label="Name: Sorted ascending. Activate to sort descending."
+                aria-sort="ascending"
+                class="column sortable active asc text-xs-left"
+                role="columnheader"
+                scope="col"
+                tabindex="0"
+              >
+                Name
+                <i
+                  aria-hidden="true"
+                  class="icon material-icons"
+                  style="font-size: 16px;"
+                >
+                  arrow_upward
+                </i>
+              </th>
+              <th
+                aria-label="From: Not sorted. Activate to sort ascending."
+                aria-sort="none"
+                class="column sortable text-xs-left"
+                role="columnheader"
+                scope="col"
+                tabindex="0"
+              >
+                From
+                <i
+                  aria-hidden="true"
+                  class="icon material-icons"
+                  style="font-size: 16px;"
+                >
+                  arrow_upward
+                </i>
+              </th>
+            </tr>
+            <tr
+              class="datatable__progress"
+            >
+              <th
+                class="column"
+                colspan="2"
+              />
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                class=""
+                colspan="2"
+              >
+                <div
+                  class="alert error"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="icon material-icons alert__icon"
+                  >
+                    warning
+                  </i>
+                  <div>
+                    
+        No more beers :(
+      
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="datatable table"
+      >
+        <div
+          class="datatable__actions"
+        >
+          <div
+            class="datatable__actions__select"
+          >
+            Rows per page:
+            <div
+              aria-label="Rows per page:"
+              class="input-group input-group--dirty input-group--append-icon input-group--hide-details input-group--text-field input-group--select input-group--auto primary--text"
+              data-uid="7"
+              role="combobox"
+              tabindex="0"
+            >
+              <div
+                class="input-group__input"
+              >
+                <div
+                  class="input-group__selections"
+                  style="overflow: hidden;"
+                >
+                  <div
+                    class="input-group__selections__comma"
+                  >
+                    5
+                  </div>
+                  <input
+                    aria-label="Rows per page:"
+                    class="input-group--select__autocomplete"
+                    disabled="disabled"
+                    style="display: none;"
+                    tabindex="-1"
+                  />
+                </div>
+                <div
+                  class="menu"
+                  style="display: inline-block;"
+                >
+                  <div
+                    class="menu__content menu__content--select menu__content--auto"
+                    style="max-height: 200px; min-width: 75px; max-width: auto; top: 18px; left: 12px; z-index: 0; display: none;"
+                  >
+                    <div
+                      class="card"
+                      style="height: auto;"
+                    >
+                      <div
+                        class="list"
+                      >
+                        <div>
+                          <a
+                            class="list__tile list__tile--link list__tile--active primary--text"
+                          >
+                            <div
+                              class="list__tile__content"
+                            >
+                              <div
+                                class="list__tile__title"
+                              >
+                                5
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div>
+                          <a
+                            class="list__tile list__tile--link"
+                          >
+                            <div
+                              class="list__tile__content"
+                            >
+                              <div
+                                class="list__tile__title"
+                              >
+                                10
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div>
+                          <a
+                            class="list__tile list__tile--link"
+                          >
+                            <div
+                              class="list__tile__content"
+                            >
+                              <div
+                                class="list__tile__title"
+                              >
+                                25
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                        <div>
+                          <a
+                            class="list__tile list__tile--link"
+                          >
+                            <div
+                              class="list__tile__content"
+                            >
+                              <div
+                                class="list__tile__title"
+                              >
+                                All
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <i
+                  aria-hidden="true"
+                  class="icon material-icons input-group__append-icon input-group__icon-cb"
+                >
+                  arrow_drop_down
+                </i>
+              </div>
+              <div
+                class="input-group__details"
+              />
+            </div>
+          </div>
+          <div
+            class="datatable__actions__range-controls"
+          >
+            <div
+              class="datatable__actions__pagination"
+            >
+              –
+            </div>
+            <button
+              aria-label="Previous page"
+              class="btn btn--disabled btn--flat btn--icon"
+              disabled="disabled"
+              type="button"
+            >
+              <div
+                class="btn__content"
+              >
+                <i
+                  aria-hidden="true"
+                  class="icon material-icons"
+                >
+                  chevron_left
+                </i>
+              </div>
+            </button>
+            <button
+              aria-label="Next page"
+              class="btn btn--disabled btn--flat btn--icon"
+              disabled="disabled"
+              type="button"
+            >
+              <div
+                class="btn__content"
+              >
+                <i
+                  aria-hidden="true"
+                  class="icon material-icons"
+                >
+                  chevron_right
+                </i>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,9 +1,8 @@
-import { shallow } from '@vue/test-utils'
+import { mount, createLocalVue } from '@vue/test-utils'
 import BeerService from '@/services/beer.service'
+import flushPromises from 'flush-promises'
 import BeerList from '@/components/BeerList'
-import Vue from 'vue'
 import Vuetify from 'vuetify';
-Vue.use(Vuetify);
 
 jest.mock('@/services/beer.service', () => ({
   get: jest.fn(),
@@ -11,34 +10,29 @@ jest.mock('@/services/beer.service', () => ({
  }))
 
 describe('BeerList.vue', () => {
+  let wrapper;
 
   beforeEach(() => {
-    BeerService.get.mockReset()
-    BeerService.get.mockReturnValue(Promise.resolve({}))
+    const localVue = createLocalVue()
+    localVue.use(Vuetify); 
+
+    jest.clearAllMocks()
+
+    wrapper = mount(BeerList, { 
+      localVue: localVue
+    });
   });
 
-  it('should render', () => {
-    // when
-    const wrapper = shallow(BeerList)
 
-    // then
-    expect(wrapper.element).toBeDefined()
-  })
-
-  it('should render with no result msg', () => {
+  it('should render with no result msg', async  () => {
     // given 
-    const response = {};
-    BeerService.get.mockReturnValue(Promise.resolve(response))
-
-    // when
-    const wrapper = shallow(BeerList)
+    BeerService.get.mockReturnValue([])
 
     // then
-    wrapper.vm.$nextTick(() => {
-      expect(BeerService.get).toHaveBeenCalled()
-      expect(wrapper.vm).toContain("No more beers :(")
-    })
-    
+    await flushPromises()
+
+    expect(BeerService.get).toHaveBeenCalled()
+    expect(wrapper.find(".alert > div").text()).toContain("No more beers :(")
   })
 
 
@@ -58,18 +52,15 @@ describe('BeerList.vue', () => {
     ];
     BeerService.get.mockReturnValue(Promise.resolve(response))
 
-    // when
-    const wrapper = shallow(BeerList)
-
     // then
-    wrapper.vm.$nextTick(() => {
+    flushPromises().then(() => {
       expect(BeerService.get).toHaveBeenCalled()
-      expect(wrapper.findAll("tr").length).toEqual(3)
-
-    })
+      console.log(wrapper.find("tbody").html())
+      expect(wrapper.findAll("tbody > tr").length).toEqual(2)
+    })   
   })
 
-  it('should delete beer', () => {
+  it('should delete beer', async () => {
     // given 
     const response = [
       {
@@ -85,16 +76,13 @@ describe('BeerList.vue', () => {
     ];
     BeerService.get.mockReturnValue(Promise.resolve(response))
 
-    // when
-    const wrapper = shallow(BeerList)
+    await flushPromises()
 
-    wrapper.vm.$nextTick(() => {
-      wrapper.find('button').trigger('click')
+    wrapper.find('button').trigger('click')
 
-      // then
-      expect(BeerService.remove).toHaveBeenCalled()
-      expect(wrapper.findAll("tr").length).toEqual(2)
-    })
+    await flushPromises()
+
+    expect(BeerService.remove).toHaveBeenCalled()
+    expect(wrapper.findAll("tbody > tr").length).toEqual(1)
   })
-
 })

@@ -1,3 +1,371 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App.vue should match snapshot 1`] = `<!---->`;
+exports[`App.vue should match snapshot 1`] = `
+<div
+  class="application theme--dark"
+  data-app="true"
+  id="app"
+>
+  <div
+    class="application--wrap"
+  >
+    <header
+      class="page-header"
+    >
+      <div
+        class="branding"
+      >
+        <img
+          alt="Logo"
+          class="logo"
+          src="https://vuejs.org/images/logo.png"
+          title="Home page"
+        />
+         
+        <h1>
+          Testing Vue.js with Beers CRUD
+        </h1>
+      </div>
+    </header>
+     
+    <main
+      class="content"
+      style="padding: 0px 0px 0px 0px;"
+    >
+      <div
+        class="content--wrap"
+      >
+        <div
+          class="container grid-list-xl"
+        >
+          <div
+            id="container"
+          />
+           
+          <div
+            id="container"
+          >
+            <div
+              class="elevation-5"
+            >
+              <div
+                class="table__overflow"
+              >
+                <table
+                  class="datatable table"
+                >
+                  <thead>
+                    <tr>
+                      <th
+                        aria-label="Name: Sorted ascending. Activate to sort descending."
+                        aria-sort="ascending"
+                        class="column sortable active asc text-xs-left"
+                        role="columnheader"
+                        scope="col"
+                        tabindex="0"
+                      >
+                        Name
+                        <i
+                          aria-hidden="true"
+                          class="icon material-icons"
+                          style="font-size: 16px;"
+                        >
+                          arrow_upward
+                        </i>
+                      </th>
+                      <th
+                        aria-label="From: Not sorted. Activate to sort ascending."
+                        aria-sort="none"
+                        class="column sortable text-xs-left"
+                        role="columnheader"
+                        scope="col"
+                        tabindex="0"
+                      >
+                        From
+                        <i
+                          aria-hidden="true"
+                          class="icon material-icons"
+                          style="font-size: 16px;"
+                        >
+                          arrow_upward
+                        </i>
+                      </th>
+                    </tr>
+                    <tr
+                      class="datatable__progress"
+                    >
+                      <th
+                        class="column"
+                        colspan="2"
+                      />
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        class=""
+                        colspan="2"
+                      >
+                        <div
+                          class="alert error"
+                        >
+                          <i
+                            aria-hidden="true"
+                            class="icon material-icons alert__icon"
+                          >
+                            warning
+                          </i>
+                          <div>
+                            
+        No more beers :(
+      
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div
+                class="datatable table"
+              >
+                <div
+                  class="datatable__actions"
+                >
+                  <div
+                    class="datatable__actions__select"
+                  >
+                    Rows per page:
+                    <div
+                      aria-label="Rows per page:"
+                      class="input-group input-group--dirty input-group--append-icon input-group--hide-details input-group--text-field input-group--select input-group--auto primary--text"
+                      data-uid="11"
+                      role="combobox"
+                      tabindex="0"
+                    >
+                      <div
+                        class="input-group__input"
+                      >
+                        <div
+                          class="input-group__selections"
+                          style="overflow: hidden;"
+                        >
+                          <div
+                            class="input-group__selections__comma"
+                          >
+                            5
+                          </div>
+                          <input
+                            aria-label="Rows per page:"
+                            class="input-group--select__autocomplete"
+                            disabled="disabled"
+                            style="display: none;"
+                            tabindex="-1"
+                          />
+                        </div>
+                        <div
+                          class="menu"
+                          style="display: inline-block;"
+                        >
+                          <div
+                            class="menu__content menu__content--select menu__content--auto"
+                            style="max-height: 200px; min-width: 75px; max-width: auto; top: 18px; left: 12px; z-index: 0; display: none;"
+                          >
+                            <div
+                              class="card"
+                              style="height: auto;"
+                            >
+                              <div
+                                class="list"
+                              >
+                                <div>
+                                  <a
+                                    class="list__tile list__tile--link list__tile--active primary--text"
+                                  >
+                                    <div
+                                      class="list__tile__content"
+                                    >
+                                      <div
+                                        class="list__tile__title"
+                                      >
+                                        5
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div>
+                                  <a
+                                    class="list__tile list__tile--link"
+                                  >
+                                    <div
+                                      class="list__tile__content"
+                                    >
+                                      <div
+                                        class="list__tile__title"
+                                      >
+                                        10
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div>
+                                  <a
+                                    class="list__tile list__tile--link"
+                                  >
+                                    <div
+                                      class="list__tile__content"
+                                    >
+                                      <div
+                                        class="list__tile__title"
+                                      >
+                                        25
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div>
+                                  <a
+                                    class="list__tile list__tile--link"
+                                  >
+                                    <div
+                                      class="list__tile__content"
+                                    >
+                                      <div
+                                        class="list__tile__title"
+                                      >
+                                        All
+                                      </div>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <i
+                          aria-hidden="true"
+                          class="icon material-icons input-group__append-icon input-group__icon-cb"
+                        >
+                          arrow_drop_down
+                        </i>
+                      </div>
+                      <div
+                        class="input-group__details"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="datatable__actions__range-controls"
+                  >
+                    <div
+                      class="datatable__actions__pagination"
+                    >
+                      –
+                    </div>
+                    <button
+                      aria-label="Previous page"
+                      class="btn btn--disabled btn--flat btn--icon"
+                      disabled="disabled"
+                      type="button"
+                    >
+                      <div
+                        class="btn__content"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="icon material-icons"
+                        >
+                          chevron_left
+                        </i>
+                      </div>
+                    </button>
+                    <button
+                      aria-label="Next page"
+                      class="btn btn--disabled btn--flat btn--icon"
+                      disabled="disabled"
+                      type="button"
+                    >
+                      <div
+                        class="btn__content"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="icon material-icons"
+                        >
+                          chevron_right
+                        </i>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+     
+    <footer
+      class="footer"
+      style="height: auto;"
+    >
+      <div
+        class="layout grey darken-3 row wrap justify-center"
+      >
+        <a
+          class="btn btn--icon"
+          href="https://github.com/NoxFr/training-kotlin-vuejs"
+        >
+          <div
+            class="btn__content"
+          >
+            <i
+              aria-hidden="true"
+              class="icon fab fa-github"
+              style="font-size: 24px;"
+            />
+          </div>
+        </a>
+        <a
+          class="btn btn--icon"
+          href="http://twitter.com/NoxFr"
+        >
+          <div
+            class="btn__content"
+          >
+            <i
+              aria-hidden="true"
+              class="icon fab fa-twitter"
+              style="font-size: 24px;"
+            />
+          </div>
+        </a>
+        <a
+          class="btn btn--icon"
+          href="https://www.linkedin.com/in/mathieu-durand-260104137/"
+        >
+          <div
+            class="btn__content"
+          >
+            <i
+              aria-hidden="true"
+              class="icon fab fa-linkedin"
+              style="font-size: 24px;"
+            />
+          </div>
+        </a>
+         
+        <div
+          class="flex xs12 py-3 text-xs-center white--text"
+        >
+          
+          ©2018 — 
+          <strong>
+            Beers
+          </strong>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+`;

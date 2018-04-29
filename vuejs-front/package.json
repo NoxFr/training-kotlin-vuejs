@@ -16,6 +16,7 @@
     "@fortawesome/fontawesome": "^1.1.5",
     "@fortawesome/fontawesome-free-brands": "^5.0.10",
     "axios": "^0.18.0",
+    "flush-promises": "^1.0.0",
     "material-design-icons-iconfont": "^3.0.3",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
