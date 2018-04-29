@@ -7,9 +7,9 @@ describe('App.vue', () => {
 
   beforeEach(() => {
     const localVue = createLocalVue()
-    localVue.use(Vuetify); 
-  
-    wrapper = mount(App, { 
+    localVue.use(Vuetify);
+
+    wrapper = mount(App, {
       localVue: localVue
     });
   });

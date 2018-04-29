@@ -6,25 +6,25 @@ import Vuetify from 'vuetify';
 
 jest.mock('@/services/beer.service', () => ({
   get: jest.fn(),
-  remove : jest.fn()
- }))
+  remove: jest.fn()
+}))
 
 describe('BeerList.vue', () => {
   let wrapper;
 
   beforeEach(() => {
     const localVue = createLocalVue()
-    localVue.use(Vuetify); 
+    localVue.use(Vuetify);
 
     jest.clearAllMocks()
 
-    wrapper = mount(BeerList, { 
+    wrapper = mount(BeerList, {
       localVue: localVue
     });
   });
 
 
-  it('should render with no result msg', async  () => {
+  it('should render with no result msg', async () => {
     // given 
     BeerService.get.mockReturnValue([])
 
@@ -40,14 +40,14 @@ describe('BeerList.vue', () => {
     // given 
     const response = [
       {
-        name :"beer1",
-        country : "country1",
-        uuid : "uuid1"
+        name: "beer1",
+        country: "country1",
+        uuid: "uuid1"
       },
       {
-        name :"beer2",
-        country : "country2",
-        uuid : "uuid2"
+        name: "beer2",
+        country: "country2",
+        uuid: "uuid2"
       }
     ];
     BeerService.get.mockReturnValue(Promise.resolve(response))
@@ -57,21 +57,21 @@ describe('BeerList.vue', () => {
       expect(BeerService.get).toHaveBeenCalled()
       console.log(wrapper.find("tbody").html())
       expect(wrapper.findAll("tbody > tr").length).toEqual(2)
-    })   
+    })
   })
 
   it('should delete beer', async () => {
     // given 
     const response = [
       {
-        name :"beer1",
-        country : "country1",
-        uuid : "uuid1"
+        name: "beer1",
+        country: "country1",
+        uuid: "uuid1"
       },
       {
-        name :"beer2",
-        country : "country2",
-        uuid : "uuid2"
+        name: "beer2",
+        country: "country2",
+        uuid: "uuid2"
       }
     ];
     BeerService.get.mockReturnValue(Promise.resolve(response))

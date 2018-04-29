@@ -7,9 +7,9 @@ describe('Header.vue', () => {
 
   beforeEach(() => {
     const localVue = createLocalVue()
-    localVue.use(Vuetify); 
-  
-    wrapper = mount(Header, { 
+    localVue.use(Vuetify);
+
+    wrapper = mount(Header, {
       localVue: localVue
     });
   });
