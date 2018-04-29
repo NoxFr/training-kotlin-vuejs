@@ -1,37 +1,36 @@
 matrix:
   include:
-    language: java
-    jdk: oraclejdk8
-    before_script:
-      - cd kotlin-back
-      - chmod +x gradlew
-    script:
-      - ./gradlew check
-      - ./gradlew jacocoTestReport
-    before_cache:
-       - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-       - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
-    cache:
-       directories:
-         - $HOME/.gradle/caches/
-         - $HOME/.gradle/wrapper/
-    after_success:
-     - cd ..
-     - pwd
-     - bash <(curl -s https://codecov.io/bash) -s kotlin-back/build/reports/jacoco -cF kotlin
-  include:
-    language: node_js
-    node_js:
-      - "9"
-    before_install :
-      - cd vuejs-front
-    cache:
-      directories:
-        - ".eslintcache"
-        - "node_modules"
-    after_success:
-      - cd ..
-      - pwd
-      - bash <(curl -s https://codecov.io/bash) -s vuejs-front/test/unit/coverage -cF vuejs
+    - language: java
+      jdk: oraclejdk8
+      before_script:
+        - cd kotlin-back
+        - chmod +x gradlew
+      script:
+        - ./gradlew check
+        - ./gradlew jacocoTestReport
+      before_cache:
+         - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+         - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+      cache:
+         directories:
+           - $HOME/.gradle/caches/
+           - $HOME/.gradle/wrapper/
+      after_success:
+       - cd ..
+       - pwd
+       - bash <(curl -s https://codecov.io/bash) -s kotlin-back/build/reports/jacoco -cF kotlin
+    - language: node_js
+      node_js:
+        - "9"
+      before_install :
+        - cd vuejs-front
+      cache:
+        directories:
+          - ".eslintcache"
+          - "node_modules"
+      after_success:
+        - cd ..
+        - pwd
+        - bash <(curl -s https://codecov.io/bash) -s vuejs-front/test/unit/coverage -cF vuejs
 notifications:
   email: false
