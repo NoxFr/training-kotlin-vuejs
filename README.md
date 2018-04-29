@@ -28,6 +28,7 @@ $ ./gradlew bootRun
 **Front**
 
 - VueJS app (created from vue-cli webpack template)
+- Material Design (with vuetify)
 - Jest unit testing
 
 **Back**
