@@ -1,8 +1,8 @@
 <template>
-    <div id="container">
+    <v-container grid-list-xl>
         <tkv-search-form></tkv-search-form>
         <tkv-beer-list></tkv-beer-list>
-    </div>
+    </v-container>
 </template>
 
 <script>
@@ -17,13 +17,3 @@ export default {
   }
 }
 </script>
-
-<style>
-  #container {
-    width: 750px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-</style>

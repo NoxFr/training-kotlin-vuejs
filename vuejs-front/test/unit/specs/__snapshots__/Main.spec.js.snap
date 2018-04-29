@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Main.vue should match snapshot 1`] = `
-<div
-  id="container"
+<v-container
+  grid-list-xl=""
 >
   <!---->
    
   <!---->
-</div>
+</v-container>
 `;

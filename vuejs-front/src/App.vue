@@ -1,9 +1,11 @@
 <template>
-  <div id="app">
+  <v-app id="app" dark>
     <tkv-header></tkv-header>
-    <tkv-main></tkv-main>
+    <v-content>
+        <tkv-main></tkv-main>
+    </v-content>
     <tkv-footer></tkv-footer>
-  </div>
+  </v-app>
 </template>
 
 <script>
