@@ -1,5 +1,8 @@
 import { shallow } from '@vue/test-utils'
 import Header from '@/components/Header'
+import Vue from 'vue'
+import Vuetify from 'vuetify';
+Vue.use(Vuetify);
 
 describe('Header.vue', () => {
   it('should contains title', () => {

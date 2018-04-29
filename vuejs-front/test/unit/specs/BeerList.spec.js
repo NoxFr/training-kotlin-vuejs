@@ -1,6 +1,9 @@
 import { shallow } from '@vue/test-utils'
 import BeerService from '@/services/beer.service'
 import BeerList from '@/components/BeerList'
+import Vue from 'vue'
+import Vuetify from 'vuetify';
+Vue.use(Vuetify);
 
 jest.mock('@/services/beer.service', () => ({
   get: jest.fn(),
