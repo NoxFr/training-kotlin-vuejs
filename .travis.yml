@@ -21,6 +21,8 @@ matrix:
      - bash <(curl -s https://codecov.io/bash) -s kotlin-back/build/reports/jacoco -cF kotlin
   include:
     language: node_js
+    node_js:
+      - "9"
     before_install :
       - cd vuejs-front
     cache:
