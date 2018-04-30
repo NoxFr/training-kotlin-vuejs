@@ -15,6 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.5",
     "@fortawesome/fontawesome-free-brands": "^5.0.10",
+    "@fortawesome/fontawesome-free-solid": "^5.0.10",
     "axios": "^0.18.0",
     "flush-promises": "^1.0.0",
     "material-design-icons-iconfont": "^3.0.3",

@@ -1,6 +1,6 @@
 <template>
-  <v-app id="app" dark>
-    <tkv-header></tkv-header>
+  <v-app id="app" :dark="isDark">
+    <tkv-header @theme-changed="isDark = $event"></tkv-header>
     <v-content>
         <tkv-main></tkv-main>
     </v-content>
@@ -15,6 +15,11 @@ import TkvMain from '@/components/Main'
 
 export default {
   name: 'app',
+  data () {
+    return {
+      isDark: false
+    }
+  },
   components: {
     TkvFooter,
     TkvMain,

@@ -14,14 +14,11 @@ describe('Header.vue', () => {
     });
   });
 
-  it('should contains title', () => {
+  it('should contains basic items', () => {
     // then
     const title = wrapper.find('h1')
     expect(title.text()).toEqual("Testing Vue.js with Beers CRUD")
-  })
-
-  it('should contains logo img', () => {
-    // then
     expect(wrapper.find('img')).toBeDefined()
+
   })
 })

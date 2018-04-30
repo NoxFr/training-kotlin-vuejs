@@ -2,7 +2,7 @@
 
 exports[`App.vue should match snapshot 1`] = `
 <div
-  class="application theme--dark"
+  class="application theme--light"
   data-app="true"
   id="app"
 >
@@ -13,18 +13,59 @@ exports[`App.vue should match snapshot 1`] = `
       class="page-header"
     >
       <div
-        class="branding"
+        class="container"
       >
-        <img
-          alt="Logo"
-          class="logo"
-          src="https://vuejs.org/images/logo.png"
-          title="Home page"
-        />
-         
-        <h1>
-          Testing Vue.js with Beers CRUD
-        </h1>
+        <div
+          class="layout"
+        >
+          <div
+            class="flex"
+          >
+            <img
+              alt="Logo"
+              class="logo"
+              src="https://vuejs.org/images/logo.png"
+              title="Home page"
+            />
+             
+            <h1>
+              Testing Vue.js with Beers CRUD
+            </h1>
+          </div>
+           
+          <div
+            class="flex"
+          >
+            <div
+              class="input-group input-group--append-icon input-group--selection-controls switch yellow--text"
+              tabindex="0"
+            >
+              <div
+                class="input-group__input"
+              >
+                <div
+                  class="input-group--selection-controls__container"
+                >
+                  <div
+                    class="input-group--selection-controls__toggle"
+                  />
+                  <div
+                    class="input-group--selection-controls__ripple"
+                  />
+                </div>
+                <i
+                  aria-hidden="true"
+                  class="icon fas fa-moon input-group__append-icon"
+                />
+              </div>
+              <div
+                class="input-group__details"
+              >
+                <!---->
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
      
@@ -139,7 +180,7 @@ exports[`App.vue should match snapshot 1`] = `
                     <div
                       aria-label="Rows per page:"
                       class="input-group input-group--dirty input-group--append-icon input-group--hide-details input-group--text-field input-group--select input-group--auto primary--text"
-                      data-uid="11"
+                      data-uid="13"
                       role="combobox"
                       tabindex="0"
                     >

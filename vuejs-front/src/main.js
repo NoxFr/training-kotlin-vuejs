@@ -3,6 +3,7 @@ import App from '@/App.vue'
 import Vuetify from 'vuetify'
 import '@fortawesome/fontawesome'
 import '@fortawesome/fontawesome-free-brands'
+import '@fortawesome/fontawesome-free-solid'
 
 // css resources
 import 'vuetify/dist/vuetify.min.css'
