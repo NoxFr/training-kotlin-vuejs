@@ -4,7 +4,7 @@ import config from '@/services/config.service'
 const url = `${config.serverURL}/beers`
 
 class BeerService {
-  static async get() {
+  static async get () {
     return axios.get(url)
       .then(response => {
         return Promise.resolve(response.data)
@@ -14,7 +14,7 @@ class BeerService {
       })
   }
 
-  static async remove(beer) {
+  static async remove (beer) {
     return axios.delete(url + '/' + beer.uuid)
   }
 }
