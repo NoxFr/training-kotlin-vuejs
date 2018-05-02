@@ -29,7 +29,8 @@ hs_err_pid*
 
 ### Gradle ###
 .gradle
-**kotlin-back/build/
+kotlin-back/build/
+kotlin-back/out/
 
 # Ignore Gradle GUI config
 gradle-app.setting
