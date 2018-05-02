@@ -24,15 +24,16 @@ describe('BeerList.vue', () => {
   });
 
 
-  it('should render with no result msg', async () => {
+  it('should render with no result msg', () => {
     // given 
-    BeerService.get.mockReturnValue([])
+    BeerService.get.mockReturnValue(Promise.resolve([]))
 
     // then
-    await flushPromises()
+    flushPromises().then(() => {
+      expect(BeerService.get).toHaveBeenCalled()
+      expect(wrapper.find(".alert > div").text()).toContain("No more beers :(")
+    })
 
-    expect(BeerService.get).toHaveBeenCalled()
-    expect(wrapper.find(".alert > div").text()).toContain("No more beers :(")
   })
 
 
@@ -55,12 +56,11 @@ describe('BeerList.vue', () => {
     // then
     flushPromises().then(() => {
       expect(BeerService.get).toHaveBeenCalled()
-      console.log(wrapper.find("tbody").html())
       expect(wrapper.findAll("tbody > tr").length).toEqual(2)
     })
   })
 
-  it('should delete beer', async () => {
+  it('should delete beer', () => {
     // given 
     const response = [
       {
@@ -76,13 +76,11 @@ describe('BeerList.vue', () => {
     ];
     BeerService.get.mockReturnValue(Promise.resolve(response))
 
-    await flushPromises()
-
     wrapper.find('button').trigger('click')
 
-    await flushPromises()
-
-    expect(BeerService.remove).toHaveBeenCalled()
-    expect(wrapper.findAll("tbody > tr").length).toEqual(1)
+    flushPromises().then(() => {
+      expect(BeerService.remove).toHaveBeenCalled()
+      expect(wrapper.findAll("tbody > tr").length).toEqual(1)
+    })
   })
 })

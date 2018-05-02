@@ -26,22 +26,25 @@ export default {
   data () {
     return {
       headers: [
-        {text: 'Name', value: 'name'},
-        {text: 'From', value: 'country'}
+        { text: 'Name', value: 'name' },
+        { text: 'From', value: 'country' }
       ],
       items: []
     }
   },
   async created () {
-    this.items = await BeerService.get()
+    this.getBeers()
   },
   methods: {
     removeItem (beer) {
-      BeerService.remove(beer)
-      this.items.splice(
-        this.items.findIndex(it => it.uuid === beer.uuid),
-        1
-      )
+      BeerService.remove(beer).then(() => {
+        this.getBeers()
+      })
+    },
+    getBeers () {
+      BeerService.get().then(result => {
+        this.items = result.data
+      })
     }
   }
 }
