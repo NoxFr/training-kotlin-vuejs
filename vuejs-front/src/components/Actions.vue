@@ -23,7 +23,7 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn color="blue darken-1" flat @click.native="dialog = false">Close</v-btn>
-            <v-btn color="blue darken-1" flat @click="addBeer">Save</v-btn>
+            <v-btn color="blue darken-1" flat @click="submit">Save</v-btn>
           </v-card-actions>
         </v-card>
       </v-form>
@@ -48,14 +48,17 @@ export default {
     }
   }),
   methods: {
-    addBeer () {
+    submit() {
       if (this.$refs.form.validate()) {
-        this.dialog = false
-        BeerService.add(this.newBeer).then(() => {
-          this.$refs.form.reset()
-          this.$emit('beers-update')
-        })
+        this.addBeer()
       }
+    },
+    addBeer () {
+      this.dialog = false
+      BeerService.add(this.newBeer).then(() => {
+        this.$refs.form.reset()
+        this.$emit('beers-update')
+      })
     }
   }
 }

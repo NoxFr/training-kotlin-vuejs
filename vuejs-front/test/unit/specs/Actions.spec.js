@@ -42,14 +42,14 @@ describe('Actions.vue', () => {
     })
 
     // when
-    wrapper.find({ ref: 'form' }).trigger("submit")
+    wrapper.vm.addBeer()
 
-    // FIXME : form.vaidate() always false
     // then
-    // expect(BeerService.add).toHaveBeenCalledWith(beer)
-    //
-    // flushPromises().then(() => {
-    //   expect(wrapper.emitted('beers-update')).toBeTruthy()
-    // })
+    expect(BeerService.add).toHaveBeenCalledWith(beer)
+    
+    flushPromises().then(() => {
+      expect(wrapper.emitted('beers-update')).toBeTruthy()
+      expect(wrapper.vm.dialog).toEqual(false)
+    })
   })
 })
