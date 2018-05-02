@@ -11,6 +11,10 @@ class BeerService {
   static async remove (beer) {
     return axios.delete(url + '/' + beer.uuid)
   }
+
+  static async add (beer) {
+    return axios.post(url, beer)
+  }
 }
 
 export default BeerService

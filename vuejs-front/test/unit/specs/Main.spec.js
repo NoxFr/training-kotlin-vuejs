@@ -7,9 +7,9 @@ describe('Main.vue', () => {
 
   beforeEach(() => {
     const localVue = createLocalVue()
-    localVue.use(Vuetify); 
-  
-    wrapper = mount(Main, { 
+    localVue.use(Vuetify);
+
+    wrapper = mount(Main, {
       localVue: localVue
     });
   });
@@ -18,5 +18,12 @@ describe('Main.vue', () => {
     // then
     expect(wrapper.element).toBeDefined();
     expect(wrapper.element).toMatchSnapshot();
+  })
+
+  it('should refresh beers', () => {
+    // when
+
+
+    // then
   })
 })

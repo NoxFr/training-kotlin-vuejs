@@ -1,19 +1,24 @@
 <template>
     <v-container grid-list-xl>
-        <tkv-search-form></tkv-search-form>
-        <tkv-beer-list></tkv-beer-list>
+        <tkv-actions @beers-update="refreshBeerList()"></tkv-actions>
+        <tkv-beer-list ref="beerList"></tkv-beer-list>
     </v-container>
 </template>
 
 <script>
-import TkvSearchForm from '@/components/SearchForm'
+import TkvActions from '@/components/Actions'
 import TkvBeerList from '@/components/BeerList'
 
 export default {
   name: 'tkvMain',
   components: {
-    TkvSearchForm,
+    TkvActions,
     TkvBeerList
+  },
+  methods: {
+    refreshBeerList () {
+      this.$refs.beerList.getBeers()
+    }
   }
 }
 </script>
