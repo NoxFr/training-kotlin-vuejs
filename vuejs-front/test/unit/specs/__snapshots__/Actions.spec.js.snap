@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Actions.vue should match snapshot 1`] = `
+<div
+  class="layout row justify-center mb-5"
+>
+  <div
+    class="dialog__container"
+    style="display: inline-block;"
+  >
+    <div
+      class="dialog__activator"
+    >
+      <button
+        class="btn btn--small beer"
+        raised=""
+        type="button"
+      >
+        <div
+          class="btn__content"
+        >
+          Add a beer
+        </div>
+      </button>
+    </div>
+    <div
+      class="dialog__content"
+      style="z-index: 0;"
+      tabindex="-1"
+    >
+      <div
+        class="dialog dialog--persistent"
+        style="max-width: 500px; display: none;"
+      >
+         
+        <form
+          novalidate="novalidate"
+        >
+          <div
+            class="card"
+            style="height: auto;"
+          >
+            <div
+              class="card__title"
+            >
+              <span
+                class="headline"
+              >
+                My awesome beer
+              </span>
+               
+              <div
+                class="card__text"
+              >
+                <div
+                  class="container grid-list-md"
+                >
+                  <div
+                    class="layout wrap"
+                  >
+                    <div
+                      class="flex xs12 sm6 md4"
+                    >
+                      <div
+                        class="input-group input-group--required input-group--text-field primary--text"
+                      >
+                        <label>
+                          Name
+                        </label>
+                        <div
+                          class="input-group__input"
+                        >
+                          <input
+                            aria-label="Name"
+                            required="required"
+                            tabindex="0"
+                            type="text"
+                          />
+                        </div>
+                        <div
+                          class="input-group__details"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                     
+                    <div
+                      class="flex xs12 sm6 md4"
+                    >
+                      <div
+                        class="input-group input-group--text-field primary--text"
+                      >
+                        <label>
+                          Country
+                        </label>
+                        <div
+                          class="input-group__input"
+                        >
+                          <input
+                            aria-label="Country"
+                            tabindex="0"
+                            type="text"
+                          />
+                        </div>
+                        <div
+                          class="input-group__details"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                 
+                <small>
+                  *indicates required field
+                </small>
+              </div>
+            </div>
+             
+            <div
+              class="card__actions"
+            >
+              <div
+                class="spacer"
+              />
+               
+              <button
+                class="btn btn--flat blue--text text--darken-1"
+                type="button"
+              >
+                <div
+                  class="btn__content"
+                >
+                  Close
+                </div>
+              </button>
+               
+              <button
+                class="btn btn--flat blue--text text--darken-1"
+                type="button"
+              >
+                <div
+                  class="btn__content"
+                >
+                  Save
+                </div>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
