@@ -1,6 +1,7 @@
 package fr.nox.hello.controllers
 
 import fr.nox.hello.db.entity.Beer
+import fr.nox.hello.db.entity.Hops
 import fr.nox.hello.db.repository.BeerRepository
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -21,6 +22,12 @@ class BeerController(private val beerRepository: BeerRepository) {
             return ResponseEntity(HttpStatus.NOT_FOUND)
         }
         return ResponseEntity(beerRepository.findAll(), HttpStatus.OK)
+    }
+
+    @GetMapping("hops")
+    fun findHopsByBeerName(@RequestParam("beerName") beerName: String): ResponseEntity<Iterable<Hops>> {
+        var hops = listOf<Hops>();
+        return ResponseEntity(hops, HttpStatus.OK)
     }
 
     @GetMapping("{uuid}")
