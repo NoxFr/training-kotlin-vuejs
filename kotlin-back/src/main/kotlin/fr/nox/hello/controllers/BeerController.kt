@@ -27,6 +27,12 @@ class BeerController(private val beerRepository: BeerRepository) {
     @GetMapping("hops")
     fun findHopsByBeerName(@RequestParam("beerName") beerName: String): ResponseEntity<Iterable<Hops>> {
         var hops = listOf<Hops>();
+        val beer = beerRepository.findByName(beerName)
+        if(beer == null){
+            return ResponseEntity(HttpStatus.NOT_FOUND)
+        }else if(beer.hopsList != null){
+            hops = beer.hopsList;
+        }
         return ResponseEntity(hops, HttpStatus.OK)
     }
 
