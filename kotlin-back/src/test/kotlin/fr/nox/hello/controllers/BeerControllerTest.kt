@@ -3,6 +3,7 @@ package fr.nox.hello.controllers
 import com.nhaarman.mockito_kotlin.mock
 import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.whenever
+import fr.nox.hello.db.dto.HopsDto
 import fr.nox.hello.db.entity.Beer
 import fr.nox.hello.db.entity.Hops
 import fr.nox.hello.db.repository.BeerRepository
@@ -12,6 +13,7 @@ import org.junit.jupiter.api.BeforeEach
 import org.mockito.ArgumentMatchers.anyString
 import org.springframework.http.HttpStatus
 import java.util.*
+import kotlin.streams.toList
 
 class BeerControllerTest {
 
@@ -40,7 +42,7 @@ class BeerControllerTest {
         val result = BeerController(beerRepository).findAllByCriterias("guiness")
 
         assertThat(result.statusCode).isEqualTo(HttpStatus.OK)
-        assertThat(result.body).isEqualTo(listOf(guinessBeer))
+        assertThat(result.body).isEqualTo(listOf(guinessBeer.toBeerDto()))
         verify(beerRepository).findByName("guiness")
     }
 
@@ -64,7 +66,7 @@ class BeerControllerTest {
         val result = BeerController(beerRepository).findAllByCriterias(null)
 
         assertThat(result.statusCode).isEqualTo(HttpStatus.OK)
-        assertThat(result.body).isEqualTo(beers)
+        assertThat(result.body).isEqualTo(beers.stream().map{b -> b.toBeerDto()}.toList())
         verify(beerRepository).findAll()
     }
 
@@ -77,7 +79,7 @@ class BeerControllerTest {
         val result = BeerController(beerRepository).findByUUID(uuid.toString())
 
         assertThat(result.statusCode).isEqualTo(HttpStatus.OK)
-        assertThat(result.body).isEqualTo(guinessBeer)
+        assertThat(result.body).isEqualTo(guinessBeer.toBeerDto())
         verify(beerRepository).findById(uuid)
     }
 
@@ -120,7 +122,7 @@ class BeerControllerTest {
         val result = BeerController(beerRepository).findHopsByBeerName("guiness")
 
         assertThat(result.statusCode).isEqualTo(HttpStatus.OK)
-        assertThat(result.body).isEqualTo(guinessHopsList)
+        assertThat(result.body).isEqualTo(guinessHopsList.stream().map{h -> h.toHopsDto()}.toList())
         verify(beerRepository).findByName("guiness")
     }
 
@@ -132,7 +134,7 @@ class BeerControllerTest {
         val result = BeerController(beerRepository).findHopsByBeerName("chouffe")
 
         assertThat(result.statusCode).isEqualTo(HttpStatus.OK)
-        assertThat(result.body).isEqualTo(listOf<Hops>())
+        assertThat(result.body).isEqualTo(listOf<HopsDto>())
         verify(beerRepository).findByName("chouffe")
     }
 
