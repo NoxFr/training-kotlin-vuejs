@@ -1,6 +1,9 @@
 package fr.nox.hello
 
+import fr.nox.hello.db.dto.BeerDto
+import fr.nox.hello.db.dto.HopsDto
 import fr.nox.hello.db.entity.Beer
+import fr.nox.hello.db.entity.Hops
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -22,9 +25,18 @@ class ApplicationTests(@Autowired private val restTemplate: TestRestTemplate) {
 
     @Test
     fun beers() {
-        val result = restTemplate.getForEntity<Array<Beer>>("/beers")
+        val result = restTemplate.getForEntity<Array<BeerDto>>("/beers")
 
         assertThat(result.statusCodeValue).isEqualTo(200)
-        assertThat(result.body?.asList()).hasOnlyElementsOfType(Beer::class.java)
+        assertThat(result.body?.asList()).hasOnlyElementsOfType(BeerDto::class.java)
+    }
+
+    @Test
+    fun beerHops() {
+        val result = restTemplate.getForEntity<Array<HopsDto>>("/beers/hops?beerName=guinness")
+
+        assertThat(result.statusCodeValue).isEqualTo(200)
+        assertThat(result.body?.asList()).hasOnlyElementsOfType(HopsDto::class.java)
+        assertThat(result.body?.asList()).hasSize(1)
     }
 }
