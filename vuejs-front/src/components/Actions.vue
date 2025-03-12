@@ -48,7 +48,7 @@ export default {
     }
   }),
   methods: {
-    submit() {
+    submit () {
       if (this.$refs.form.validate()) {
         this.addBeer()
       }
